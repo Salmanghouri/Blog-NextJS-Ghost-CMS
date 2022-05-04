@@ -13,7 +13,7 @@ async function getPost(slug: string) {
 }
 
 //Ghost CMS Request
-export const getStaticProps = async ({ params }) => {
+export const getStaticProps = async ({ params } :{params:any}) => {
   const post = await getPost(params.slug)
   return {
     props: { post },
@@ -43,6 +43,7 @@ type Post = {
 const Post: React.FC<{ Post: Post }> = props => {
 
   console.log(props)
+   
 
   const {post}  = props
   const [enableLoadComments, setEnabeLoadComments] = useState<boolean>(true)
