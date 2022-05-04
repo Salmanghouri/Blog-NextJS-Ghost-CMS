@@ -37,6 +37,7 @@ type Post = {
   title: string
   html: string
   slug: string
+  created_at: string
 
 }
 
@@ -76,21 +77,23 @@ const Post: React.FC<{ post: Post }> = props => {
 
     <div>
     
-      <Link href="/"><a>Go Back</a></Link>
 
 
+      <button  type="button" className="text-white bg-gradient-to-r from-teal-500 via-teal-600 to-teal-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"> <Link href="/"><a>Go Back</a></Link></button>
+           
 
         <div className="text-xl font-mono font-bold ">
 
-      <h1>My blog Posts</h1>
-      <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
+      <h1 className="text-4xl">Post URL:<span>{post.slug}</span></h1><br/>
+   
+      <div className="text-xl font-semibold" dangerouslySetInnerHTML={{ __html: post.html }}></div>
 
 
-
+      <br/>
       {enableLoadComments && (
-            <p onClick={loadComments}>
-            Load Comments
-            </p>
+               <button  onClick={loadComments} type="button" className="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"> Load Comments</button>
+           
+            
             )}
        <div id="disqus_thread"></div>
 

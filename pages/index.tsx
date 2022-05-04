@@ -3,10 +3,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
-import Header from './components/Header'
-import Banner from './components/Banner';
-import Footer from './components/Footer';
-import Blogs from './Blogs'
+import Navbar from './components/Navbar/index';
+
 
 const { BLOG_URL, CONTENT_API_KEY } = process.env
 
@@ -45,8 +43,9 @@ const Home: React.FC<{ posts: Post[] }> = (props) => {
   console.log(posts)
   return (
 
-    <>
 
+<>
+<Navbar/>
 
       {/* Blog Start */}
 
@@ -84,10 +83,11 @@ const Home: React.FC<{ posts: Post[] }> = (props) => {
                   <div className="py-8 flex flex-wrap md:flex-nowrap">
                     
                     <div className="md:flex-grow">
-                      <h2 className="text-2xl font-medium text-gray-900 title-font mb-2"><Link href="/post/[slug]" as={`/post/${post.slug}`}><a>{post.title}</a></Link></h2>
+                      
+                      <h2 className="text-3xl font-bold text-teal-600 font-mono mb-2"><Link href="/post/[slug]" as={`/post/${post.slug}`}><a>{post.title}</a></Link></h2>
                       <p className="leading-relaxed"> {post.custom_excerpt}</p>
                       <span className="mt-1 text-gray-500 text-sm">{post.created_at}</span><br/>
-                      <a className="text-green-500 inline-flex items-center mt-4"> 
+                      <a className="text-teal-900 inline-flex items-center mt-4"> 
                       <Link href="/post/[slug]" as={`/post/${post.slug}`}><a>{post.slug}</a></Link>
                         <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} fill="none" strokeLinecap="round" strokeLinejoin="round">
                           <path d="M5 12h14" />
@@ -96,7 +96,7 @@ const Home: React.FC<{ posts: Post[] }> = (props) => {
                       </a>
                     </div>
                   </div>
-
+                  <hr/>
 
                 </li>
 
