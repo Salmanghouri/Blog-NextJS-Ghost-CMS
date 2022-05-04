@@ -70,10 +70,18 @@ const Post: React.FC<{ post: Post }> = props => {
           
   }
   return (
+    <>
+   <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4 mt-12 mb-12">
 
 
     <div>
+    
       <Link href="/"><a>Go Back</a></Link>
+
+
+
+        <div className="text-xl font-mono font-bold ">
+
       <h1>My blog Posts</h1>
       <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
 
@@ -87,6 +95,11 @@ const Post: React.FC<{ post: Post }> = props => {
        <div id="disqus_thread"></div>
 
     </div>
+
+    </div>
+    
+    </section>
+    </>
   )
 }
 
