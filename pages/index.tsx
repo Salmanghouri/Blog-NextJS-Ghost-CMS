@@ -24,7 +24,7 @@ async function getPosts() {
   return posts
 }
 
-export const getStaticProps = async ({ params }) => {
+export const getStaticProps = async ({ params } :{params:any}) => {
   const posts = await getPosts()
   return {
     revalidate: 10,

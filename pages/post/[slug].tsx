@@ -37,13 +37,14 @@ type Post = {
   title: string
   html: string
   slug: string
+
 }
 
 const Post: React.FC<{ Post: Post }> = props => {
 
   console.log(props)
 
-  const { post } = props
+  const {post}  = props
   const [enableLoadComments, setEnabeLoadComments] = useState<boolean>(true)
 
   const router = useRouter()
