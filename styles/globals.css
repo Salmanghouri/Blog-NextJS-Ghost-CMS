@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
+.stext{
+    @apply hover:text-white duration-500 rounded-lg hover:bg-teal-600 py-2 px-2 hover:animate-spin ;
+
+    
+}
 @tailwind utilities;

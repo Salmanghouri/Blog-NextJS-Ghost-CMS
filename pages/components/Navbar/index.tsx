@@ -21,7 +21,7 @@ const Navbar = () => {
           
           
           <li>
-            <Link href="/">
+            <Link href="https://salmanghouri.vercel.app/">
             <a className="stext"> Home</a>
             </Link>
           </li>
@@ -45,8 +45,8 @@ const Navbar = () => {
 
 </div>
         <button className="inline-flex items-center text-white bg-teal-600 border-0 py-1 px-3  rounded-lg focus:outline-none hover:bg-teal-700  text-xl font-bold mt-4 md:mt-0">
-        <Link href="https://blog-salmanghouri.vercel.app/"><a>
-          My Portfolio
+        <Link href="/"><a>
+          Dev Community
           </a>
           </Link>
         </button>
