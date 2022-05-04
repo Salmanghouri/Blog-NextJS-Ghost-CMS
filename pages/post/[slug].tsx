@@ -40,7 +40,7 @@ type Post = {
 
 }
 
-const Post: React.FC<{ Post: Post }> = props => {
+const Post: React.FC<{ post: Post }> = props => {
 
   console.log(props)
    
